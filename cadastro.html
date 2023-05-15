@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/cadastro.css">
+    <script>
+        function enviar(){
+          var nome, sobrenome, e_mail, celular, senha01, senha02;
+          nome = document.getElementById("input_name").value;   
+          sobrenome = document.getElementById("input_sobrename").value;
+          e_mail = document.getElementById("input_e-mail").value;   
+          celular = document.getElementById("input_cell").value;        
+          senha01 = document.getElementById("input_senha").value;
+          senha02 = document.getElementById("input_senha2").value;      
+          if( nome == "" || sobrenome == "" || e_mail=="" || celular == "" || sobrenome == "" || senha01 == "" || senha02 =="")
+          {
+            alert("Por favor, preencha todos os campos!");
+            // alert("Digite uma senha, os campos senhas não podem ser vazio!");
+          }
+          else if (senha01 != senha02){
+            alert("As senhas digitadas não são iguais");        
+          }else{
+                alert("Formulário enviado, parabéns você tem um cadastro!");
+                alert("Faça o login.");
+            }
+    
+        }//fim da função
+      </script>
+      <header>
+        <img class="logo" src="imagens/logo.png" alt="logo empresa" width="150px" height="100px">
+        <a href="cadastro.html"><img class="noti" src="imagens/notificação.png" alt="noti" width="40px" height="40px" ></a>
+        <br><br><br>
+        <h1 class="t1"> THE JOB YOUR</h1>
+        <br><br>
+        <br><br><br>
+        <br><br><br>
+        <a class="button button1" href="./index.html" target="_blank">Inicio</a>
+        <a class="button button2" href="sobre.html" target="_blank">Sobre</a>
+        <a class="button button3" href="vagas.html" target="_blank">Vagas</a>
+        <a class="button button4" href="curriculo.html" target="_blank">Currículo</a>
+        <a class="button button5" href="mensagem.html" target="_blank">Mensagem</a>
+        <a class="button button6" href="./cadastro.html" target="_blank">Cadastre-se</a>
+        <a class="button button7" href="./login.html" target="_blank">Login</a>
+    </header>
+<body>
+    <section>
+        <h2>Seu cadastro aqui.</h1>
+        <label for="text">Nome:</label>
+            <br>
+                <input type="text" id="input_name" name="nome:" required>
+            <br>
+        <label for="text">Sobrenome:</label>
+            <br>
+                <input type="text" id="input_sobrename" name="Sobrenome:" required>
+            <br>
+        <label for="text">E-mail:</label> 
+            <br>
+                <input type="text" id="input_e-mail" name="e-mail:" required>
+            <br> 
+        <label for="number">Celular:</label> 
+            <br>
+                <input type="number" id="input_cell" name="celular:" required>
+            <br>
+        <label for="number">Senha:</label> 
+            <br>
+                <input type="number" id="input_senha" name="senha:" required>
+            <br>
+        <label for="number">Confirme a senha:</label> 
+            <br>
+                <input type="password" id="input_senha2" name="confirme a senha:" required>
+            <br>       
+            <button type="enviar" onclick="enviar()">Enviar</button> 
+    </section>
+</body>
+</html>
