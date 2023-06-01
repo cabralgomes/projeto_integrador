@@ -1,25 +1,104 @@
-header{
-    background-image: url("../imagens/header.jpg");
+*{
+    font-family:sans-serif ;
+}
+body{
+    background-image:url(../imagens/login.jpg) ;
     background-size: cover;
     background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+}
+.box{
+    background-image:url(../imagens/login.jpg) ;
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin-left: 25%;
+    align-items: center;
+    backdrop-filter: (20px);
+    border:solid 2px #000000;
+    width: 50%;
+    height: 10%;
+}
+.container{
+    width: 350px;
+    display: flex;
+    flex-direction: column;
+    padding: 0 15px 0 15px;
+}
+a{
     color: white;
+    font-size: 30px;
+    text-decoration: none;
+}
+p{
+    color: white;
+    font-size: 40px;
+    margin-left: 100%;
+}
+.input{
+    height: 45px;
+    width: 50%;
+    border-radius: 30px ;
+    color: rgb(158, 158, 158);
+    padding:10px 42px;
+    background: rgb(0, 0, 0);
+    font-size: 40px;
+    margin: 5px;
+}
+i{
+    position: relative;
+    top: -31px;
+    left: 17px;
+    color: rgb(240, 7, 7);
+}
+::-webkit-input-placeholder{
+    color: white;
+}
+.entrar{
+   width: 20%;
+   border-radius: 30px;
+   font-size: 30px;
+   
+    background-color: black;
+    text-align: center;
+}
+.bottom{
+    font-size: 30px;
+    color: rgb(255, 255, 255);
+    margin-top: 10px;
+}
+.left{
+    display: flex;
+    padding:0% 30%;
+}
+label a{
+    color: white;
+    text-decoration: none;
+}
+
+.t1,.sub_tit{
+    text-align: center;
+    font-size: larger;
+color: white;
+}
+.logo, .noti{
+    border: 2px solid white;
+    border-radius: 6px;  
 }
 .noti{
     position: absolute;
-    top: 3%;
-   right: 2%;
+    right: 10px;
+    top: 1%; 
+    width: 40px;    
+    height: 40px;
 }
 .logo{
-    position: absolute;
-    top: 2%;
-    left: 1%;
-}
-.t1{
-    position: absolute;
-    top: 0%;
-    left: 40%;
-    font-size: 4em;
-}
+    position: relative;
+    left: 2px;
+    top: 2px;    
+    width: 200px;
+    height: 150px;
+}    
 .button{
     background-color: #000000; /* black */
     border: solid 1px rgb(255, 255, 255);
@@ -39,38 +118,51 @@ header{
     color: black;
     border: solid 2px  #8aafff;
 }
-.button1{
+
+.botoes_direita{
     position: absolute;
-    left: 1%;
-    top: 15%;
+    right: 4%;
+    top: 1%; 
 }
-.button2{
+/* Abaixo as configurações responsivas de acesso via celular! */
+@media only screen and (max-width: 600px) {/* Inicio
+    do css responsivo para celular! */
+   .botoes_direita{
+       position: absolute;
+       left: 110%;        
+       top: 2%;
+       font-size: 13px;
+   }
+   .noti{
+           position: absolute;
+           left: -100px;
+           top: 2%;        
+   }
+   .logo{
+       position: relative;
+       left: 10px;
+       top: -100%;      
+   }
+   .box{
+    width: 135%;
+    margin-left: auto;
+   }
+   body{
+    background-image: none;
+    
+    background-image: url(../imagens/header.jpg);
+   }
+   .input{
+background: transparent;
+   }
+   p{
+    color: black;
     position: absolute;
-   left: 7%;
-   top: 15%;
-}
-.button3{
-    position: absolute;
-    left: 13%;
-    top: 15%;
-}
-.button4{
-    position: absolute;
-    left: 19%;
-    top: 15%;
-}
-.button5{
-    position: absolute;
-    left: 26%;
-    top: 15%;
-}
-.button6{
-    position: absolute;
-    right: 7%;
-    top: 15%;
-}
-.button7{
-    position: absolute;
-    right: 1%;
-    top: 15%;
-}
+    top: 35%;
+    right: -30%;
+   }
+   .entrar{
+    width: 40%;
+    opacity: 85%;
+   }
+}/* Final do css responsivo para celular! */

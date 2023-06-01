@@ -1,0 +1,135 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: sans-serif; 
+}
+body{
+    background-color: #345a7b;
+}
+.box{
+    display: flex;
+
+}
+.box1{
+    color: black;
+    background-color: white;
+    /* background-color: rgb(54, 52, 52); */
+    margin-top: 2%;
+    width: 25%;
+    border-radius: 6%;
+    margin: 5px;    
+}
+.titulo1{
+    text-align: center;
+    color: red;
+}
+.cometario1{
+    color: black;
+}
+.centralizar_vaga1{
+    text-align: center;
+    
+}
+.vaga1{
+    width: 50%;  
+}
+
+.footer1, .footer-1, .footer--1{
+    width: 50px;
+    border-radius: 60%;
+    border: solid black 1px;
+}
+header{
+    background-image: url("../imagens/header.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: white;
+}
+.t1,.sub_tit{
+    text-align: center;
+
+}
+.logo, .noti{
+    border: 2px solid white;
+    border-radius: 6px;  
+}
+.noti{
+    position: absolute;
+    right: 10px;
+    top: 1%; 
+    width: 40px;    
+    height: 40px;
+}
+.logo{
+    position: relative;
+    left: 2px;
+    top: 2px;    
+    width: 150px;
+    height: 100px;
+}    
+.button{
+    background-color: #000000; /* black */
+    border: solid 1px rgb(255, 255, 255);
+    color: white;
+    padding: 12px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    transition-duration: 0.4s;
+    cursor: pointer;
+    border-radius: 6px;
+}
+.button:hover{
+    background-color:white;
+    color: black;
+    border: solid 2px  #8aafff;
+}
+
+.botoes_esquerda{
+    position: absolute;
+    left: 180px;
+    top: 1%; 
+}
+
+.botoes_direita{
+    position: absolute;
+    right: 3%;
+    top: 1%; 
+}
+/* Abaixo as configurações responsivas de acesso via celular! */
+@media only screen and (max-width: 600px) {/* Inicio
+    do css responsivo para celular! */
+    .botoes_esquerda{
+       position: relative;
+       left: 10px;
+       top: 5%;
+       font-size: 13px;
+   }
+   
+   .botoes_direita{
+       position: relative;
+       left: 10px;        
+       top: 5%;
+       font-size: 13px;
+   }
+   .noti{
+           position: absolute;
+           right: 10px;
+           top: 2%;        
+   }
+   .logo{
+       position: relative;
+       left: 10px;
+       top: 2%;      
+   }    
+   .box{
+    display: block;
+}
+.box1{
+    width: auto;
+    margin: 3%;
+}
+}/* Final do css responsivo para celular! */

@@ -1,0 +1,39 @@
+*{
+    font-family: sans-serif;
+}
+header{
+    background-color: rgb(43, 40, 40);
+/* display: flex; */
+color: white;
+}
+body{
+    background-color:white;
+    /* width: 90%; */
+}
+section{
+    background-color:  rgb(129, 127, 127);
+    border-radius: 6px;
+}
+input{
+border-radius: 10%;
+width: 200px;
+}
+.pessoa1{
+    position: absolute;
+    width: 30%;
+    top: 20%;
+    right: 5%;
+}
+.t1{
+    text-align: center;
+}
+/* .t1{
+position: absolute;
+top: 1%;
+left: 35%;
+}
+.l1{
+    position: absolute;
+    top: 8%;
+    left: 15%;
+} */
