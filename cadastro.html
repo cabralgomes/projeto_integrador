@@ -15,7 +15,7 @@
             <img src="imagens/cadastro.png" alt="">
         </div>
         <div class="form">
-            <form action="#">
+            <form action="f1">
                 <div class="form-header">
                     <div class="title">
                         <h1>Cadastre-se</h1>
@@ -92,10 +92,28 @@
             </form>
         </div>
     </div>
-<script>
-    function enviar(){
-        alert("Parabéns, agora você já tem o seu cadastro")
-    }
-</script>
+
+    <script>
+        function enviar() {
+          var nome = document.getElementById('input_name').value;
+          var sobrenome = document.getElementById('input_sobrename').value;
+          var email = document.getElementById('input_email').value;
+          var numero = document.getElementById('input_cell').value;
+          var senha1 = document.getElementById('input_senha1').value;
+          var senha2 = document.getElementById('input_senha2').value;
+    
+          if (nome === '' ||  sobrenome === '' || email  === '' ||numero === '' ||senha1 === '' || senha2 === '') {
+            alert('Por favor, preencha todos os campos do formulário!');
+          } 
+          else if (senha1 !== senha2) {
+        alert('As senhas digitadas não são iguais. Por favor, verifique novamente!');
+      }
+          else {
+            alert('Parabéns, agora você já fez o seu cadastro');
+            document.getElementById('f1').reset(); // Limpa o formulário após o envio
+          }
+        }
+      </script>
+
 </body>
 </html>

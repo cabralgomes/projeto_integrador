@@ -8,7 +8,30 @@
     <link rel="stylesheet" href="css/curriculo.css">
 </head>
 <body>
-    <a class="button" href="./index.html">Inicio</a>
+    <section>
+        <div class="div_logo">
+            <img class="logo" src="./imagens/logo.png" alt="logo empresa">  
+      </div>
+      <div class="div_noti">
+          <a href="cadastro.html"><img class="noti" src="./imagens/notificação.png" alt="noti"></a>   
+      </div>
+      <div class="t1">
+           <h1 > THE JOB YOUR</h1>   
+      </div>
+      <div class="sub_tit">
+           <H3 >É um site que Você Precisa!!</H3>   
+      </div>
+      <div class="botoes_esquerda">
+          <a class="button" href="index.html" >Inicio</a>
+          <a class="button" href="vagas.html" >Vagas</a>
+          <a class="button" href="curriculo.html" >Currículo</a>
+          
+      </div>
+      <div class="botoes_direita">
+          <a class="button" href="cadastro.html" >Cadastre-se</a>
+          <a class="button" href="login.html" >Login</a>
+      </div>
+    </section>
     <header> 
         
         <h1 class="t1">Cargo Desejado e Porque?</h1>
@@ -42,7 +65,11 @@
                                 <label for="number">Celular</label>
                                 <br>
                                 <input id="input_cell" type="tel" name="input_cell" placeholder="(xx) xxxx-xxxx" required>
-                            </div>
+                            </div><br>
+                            <form action="processa_imagem_perfil.php" method="post" enctype="multipart/form-data">
+                                <label>Imagem de perfil: <input type="file" name="image"></label>
+                                <button type="submit" value="Submit">Mudar foto</button>
+                            </form>                            
             <div><img class="pessoa1" src="imagens/monkey.jpg" alt=""></div>
             <br>
             <div class="cor"><a class="button" onclick="myFunction()" href="#">Enviar</a></div>
@@ -119,10 +146,21 @@
     <a class="button" onclick="myFunction()" href="#">Enviar</a>
     <script>
         function myFunction() {
-          alert("olá, você já enviou o seu curriculo.\n obrigado !");
-        }
-        </script>
+          var nome = document.getElementById('input_name').value;
+          var idade = document.getElementById('input_idade').value;
+          var endereço = document.getElementById('input_endereço').value;
+          var cidade = document.getElementById('input_cidade').value;
+          var email = document.getElementById('input_email').value;
+          var numero = document.getElementById('input_cell').value;
     
+          if (nome === '' ||  idade === '' || endereço === '' ||cidade === '' ||email === '' || numero === '') {
+            alert('Por favor, preencha todos os campos do formulário!');
+          } else {
+            alert('Formulário enviado com sucesso!');
+            document.getElementById('meuFormulario').reset(); // Limpa o formulário após o envio
+          }
+        }
+      </script>
     
 </body>
 </html>
